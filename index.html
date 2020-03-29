@@ -35,17 +35,19 @@
 
     <!-- TODO: Add a drawing canvas here -->
 
-    <canvas id='my-canvas' width="150" height="150"></canvas>
+    <canvas id='my-canvas' width="250" height="250"></canvas>
 
   </div>
 
   <div class='container'>
     <button id='checkAnswer' class='btn' value='Check'>Check Answer</button>
+
+    <button id='clearCanvas' class='btn' value='clear'>Clear Canvas</button>
   </div>
 
   <!-- TODO: Set up TF model and drawing logic-->
   <script>
-
+    
 
     loadModel()
     prepareCanvas()
@@ -55,6 +57,10 @@
       checkAnswer();
       clearCanvas();
       nextQuestion();
+    });
+
+    document.getElementById('clearCanvas').addEventListener('click', function () {
+      clearCanvas();
     });
 
   </script>
